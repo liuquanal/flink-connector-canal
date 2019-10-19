@@ -88,7 +88,6 @@ public class FlinkCanalConsumer extends RichSourceFunction<FlatMessage> {
 
     @Override
     public void cancel() {
-        isCancel = true;
         closeCanal();
     }
 
@@ -100,7 +99,9 @@ public class FlinkCanalConsumer extends RichSourceFunction<FlatMessage> {
 
     private void closeCanal() {
         try {
+            isCancel = true;
             connector.disconnect();
+            logger.info("canal closed");
         } catch (Exception e) {
             // ignore
         }
