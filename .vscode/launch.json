@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FlinkCanalConsumerTest",
+            "request": "launch",
+            "mainClass": "com.aquanz.flink.connector.canal.test.FlinkCanalConsumerTest",
+            "projectName": "flink-connector-canal"
+        }
+    ]
+}
